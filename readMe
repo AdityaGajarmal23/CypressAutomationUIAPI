@@ -1,0 +1,78 @@
+# Cypress Test Automation Framework
+
+## Overview
+
+This repository contains an automated testing framework built using Cypress . The framework is designed to provide a scalable and maintainable structure for writing and executing end-to-end tests.
+
+## Table of Contents
+
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Running Tests](#running-tests)
+- [Configuration](#configuration)
+
+## Features
+
+- **Page Object Model (POM):** Organize your tests using the Page Object Model for improved maintainability and reusability. This ivolves selectors and functions of each page on a single  '.js' file which helps in reducing possibility of duplicated selectors. 
+Since each file is handling functions and selectors for each page it becomes easier to modify if required.
+- **Test Data Handling:** Manage test data effectively to create a robust and scalable test suite.
+
+## Pre-requisites
+
+Before you begin, ensure you have met the following requirements:
+
+- [Node.js](https://nodejs.org/) installed locally
+
+## Getting Started
+
+1. Install dependencies::
+
+   Open terminal
+   Enter npm install
+
+2. Run Cypress Ui::
+
+   Open terminal
+   Enter npx cypress open
+
+## Project Structure
+
+cypress/
+  ├── fixtures/            # Test data files
+  ├── e2e/                 # Test scripts
+  ├── support/             # Custom commands and utilities & Pages
+  ├── reports/             # Reports 
+  └── videos               # Video recording of the Execution run
+
+## Running Tests
+
+ Execute all tests in Headless Mode:
+   -> npx cypress run
+ Execute all tests in Headed Mode:
+   -> npx cypress run --headed
+ Execute all tests and Generate Report:
+   -> npm run test
+ Execute Api tests and Generate Report:
+   -> npm run testApi
+Execute Login UI tests and Generate Report:
+   -> npm run loginTest
+
+ ## Configuration
+
+ Configure Base Url:
+    Navigate to cypress.config.js where baseUrl is present and use it to navigate to desired baseurl inside test scripts inside e2e folder.
+
+ Activate/Deactivate Test isolation :
+    Navigate to cypress.config.js and change the below Values Accordingly to isolate test case from each other
+    - To Activate - testIsolation:true,
+    - To Dectivate - testIsolation:false,
+    - To set Default Command Timeout - This will execute each command for the set timeout value (in msec)
+    - To set repsonseTimeout - This is the timeout taken by the execution for waiting for response.
+    - To Set Video Recording when executed from Command Line before e2e-
+      use video:true,
+    - To ennable reports generated in Mocha Format use below command in config.js-
+      const { defineConfig } = require("cypress");
+        module.exports = defineConfig({
+        reporterEnabled: "spec, mochawesome"})

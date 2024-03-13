@@ -1,0 +1,17 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "Testing of LoginTest app and API Testing",
+  "main": "index.js",
+  "author": "Aditya",
+  "license": "ISC",
+  "devDependencies": {
+
+  },
+  "scripts": {
+    "delete:reports": "rm cypress/results/* || true",
+    "loginTest": "npm run delete:reports && cypress run --spec cypress/e2e/LoginTests/LoginTest.cy.js --browser chrome --headed",
+    "testApi": "npm run delete:reports && cypress run --spec cypress/e2e/APITests/APITesting.cy.js --browser chrome",
+    "test": "npm run delete:reports && cypress run "
+  }
+}

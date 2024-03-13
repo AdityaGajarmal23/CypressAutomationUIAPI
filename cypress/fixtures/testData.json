@@ -1,0 +1,32 @@
+{
+    "validCredentials":
+    {
+        "username":"student",
+        "password":"Password123"
+    },
+    "incorrectUsernameCredentials":
+    {
+        "username":"incorrectUser",
+        "password":"Password123"
+    },
+    "incorrectPasswordCredenntials":
+    {
+        "username":"student",
+        "password":"incorrectPassword"
+    },
+    "api":
+    {
+        "name":"Jason",
+        "last_name":"Random",
+        "pageID":2,
+        "invalidUserID":23,
+        "job": "QA",
+        "updatedJob":"SQA",
+        "newName":"Rock",
+        "unknownValidID":2,
+        "unknownInValidID":300,
+        "email": "eve.holt@reqres.in",
+        "password": "pistol"
+        
+    }
+}
