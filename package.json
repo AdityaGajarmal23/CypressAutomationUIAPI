@@ -6,12 +6,16 @@
   "author": "Aditya",
   "license": "ISC",
   "devDependencies": {
-
+    "cypress": "^13.8.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
   },
   "scripts": {
     "delete:reports": "rm cypress/results/* || true",
     "loginTest": "npm run delete:reports && cypress run --spec cypress/e2e/LoginTests/LoginTest.cy.js --browser chrome --headed",
     "testApi": "npm run delete:reports && cypress run --spec cypress/e2e/APITests/APITesting.cy.js --browser chrome",
     "test": "npm run delete:reports && cypress run "
+  },
+  "dependencies": {
+    "mochawesome-merge": "^4.3.0"
   }
 }

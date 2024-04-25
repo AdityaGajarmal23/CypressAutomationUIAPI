@@ -2,12 +2,19 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   reporterEnabled: "spec, mochawesome",
+  reporter: 'cypress-mochawesome-reporter',
   mochawesomeReporterOptions: {
+    // reporterOptions: {
     reportDir: "cypress/reports/mochawesome",
     quiet: true,
     overwrite: false,
     html: true,
-    json: true
+    json: true,
+    charts : true,
+    reportPageTitle: "Cypress Inline Reporter",
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
   },
   video:true,
   e2e: {
