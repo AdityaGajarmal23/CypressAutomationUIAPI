@@ -1,0 +1,187 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-25T14:06:33.679Z",
+    "end": "2024-04-25T14:06:46.555Z",
+    "duration": 12876,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9e36e200-18ac-4c9a-bb66-0d2af89ad303",
+      "title": "",
+      "fullFile": "cypress/e2e/LoginTests/LoginTest.cy.js",
+      "file": "cypress/e2e/LoginTests/LoginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "08267112-a993-41d8-ae2b-4425d1f87ad3",
+          "title": "Visit Practice Automation for Practice",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Successful Login with Valid Credentials",
+              "fullTitle": "Visit Practice Automation for Practice Verify Successful Login with Valid Credentials",
+              "timedOut": null,
+              "duration": 8489,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/LoginTests/LoginTest.cy.js\"\n}",
+              "code": "const Credentials = creds.validCredentials;\nlp.verifyLoginPageDetailsPresent();\nlp.inputUsername(Credentials.username);\nlp.inputPassword(Credentials.password);\nlp.clicksubmitButton();\nlp.successfulLoginAfterPage();\nlp.signout();\nlp.verifyLoginPageDetailsPresent();",
+              "err": {},
+              "uuid": "24e5de21-b6a9-4d8c-ab55-a51281c10d4a",
+              "parentUUID": "08267112-a993-41d8-ae2b-4425d1f87ad3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Error Notification when Login with Inccorect Username and Correct Password",
+              "fullTitle": "Visit Practice Automation for Practice Verify Error Notification when Login with Inccorect Username and Correct Password",
+              "timedOut": null,
+              "duration": 879,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/LoginTests/LoginTest.cy.js\"\n}",
+              "code": "const Credentials = creds.incorrectUsernameCredentials;\nlp.verifyLoginPageDetailsPresent();\nlp.inputUsername(Credentials.username);\nlp.inputPassword(Credentials.password);\nlp.clicksubmitButton();\nlp.verifyInvalidUsernamePopup();\nlp.verifyLoginPageDetailsPresent();",
+              "err": {},
+              "uuid": "85765cd6-cea2-4544-83b0-018ef2646c5f",
+              "parentUUID": "08267112-a993-41d8-ae2b-4425d1f87ad3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Error Notification when Login with Correct Username and Invalid Password",
+              "fullTitle": "Visit Practice Automation for Practice Verify Error Notification when Login with Correct Username and Invalid Password",
+              "timedOut": null,
+              "duration": 859,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/LoginTests/LoginTest.cy.js\"\n}",
+              "code": "const Credentials = creds.incorrectPasswordCredenntials;\nlp.verifyLoginPageDetailsPresent();\nlp.inputUsername(Credentials.username);\nlp.inputPassword(Credentials.password);\nlp.clicksubmitButton();\nlp.verifyInvalidPasswordPopup();\nlp.verifyLoginPageDetailsPresent();",
+              "err": {},
+              "uuid": "82960d47-79b8-4ced-80ca-cfc804a24829",
+              "parentUUID": "08267112-a993-41d8-ae2b-4425d1f87ad3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Successful Login when login Credentials are fetched from Page and submitted",
+              "fullTitle": "Visit Practice Automation for Practice Verify Successful Login when login Credentials are fetched from Page and submitted",
+              "timedOut": null,
+              "duration": 2356,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/LoginTests/LoginTest.cy.js\"\n}",
+              "code": "lp.verifyLoginPageDetailsPresent();\nlp.verifyLoginPageAppeared();\nlp.fetchLoginCredsfromPage();\nlp.successfulLoginAfterPage();\nlp.signout();\nlp.verifyLoginPageDetailsPresent();",
+              "err": {},
+              "uuid": "5f92abe8-2cdc-46e5-a3ee-8e501d7966be",
+              "parentUUID": "08267112-a993-41d8-ae2b-4425d1f87ad3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Username Error if Submit is clicked without entering Username and Password",
+              "fullTitle": "Visit Practice Automation for Practice Verify Username Error if Submit is clicked without entering Username and Password",
+              "timedOut": null,
+              "duration": 134,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/LoginTests/LoginTest.cy.js\"\n}",
+              "code": "lp.verifyLoginPageDetailsPresent();\nlp.verifyLoginPageAppeared();\nlp.clicksubmitButton();\nlp.verifyInvalidUsernamePopup();\nlp.verifyLoginPageDetailsPresent();",
+              "err": {},
+              "uuid": "2e1ae426-2f5e-4e45-8a49-8d763be85828",
+              "parentUUID": "08267112-a993-41d8-ae2b-4425d1f87ad3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "24e5de21-b6a9-4d8c-ab55-a51281c10d4a",
+            "85765cd6-cea2-4544-83b0-018ef2646c5f",
+            "82960d47-79b8-4ced-80ca-cfc804a24829",
+            "5f92abe8-2cdc-46e5-a3ee-8e501d7966be",
+            "2e1ae426-2f5e-4e45-8a49-8d763be85828"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12717,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "quiet": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "Cypress Inline Reporter",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}

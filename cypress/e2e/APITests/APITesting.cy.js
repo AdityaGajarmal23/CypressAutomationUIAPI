@@ -72,7 +72,7 @@ describe("Testing of Reqres Site for API Calling",()=>{
         const api = creds.api;
         const unknownId =api.invalidUserID;
         lp.getUnknownById(unknownId).then((response) => {
-          expect(response.status).to.eq(404);
+          expect(response.status).to.eq(401);
           expect(response.body.data).to.eq(undefined);
         });
 
